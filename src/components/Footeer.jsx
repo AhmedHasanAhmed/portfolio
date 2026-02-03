@@ -13,7 +13,7 @@ export default function Footer({ scrollToSection }) {
               <span className="text-white font-bold text-xl">A</span>
             </div>
             <span className="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-              Alex Morgan
+              DevXamada
             </span>
           </div>
         </div>
