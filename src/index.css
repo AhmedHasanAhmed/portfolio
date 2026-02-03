@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-gradient: linear-gradient(to right, #4f46e5, #7c3aed);
+    --secondary-gradient: linear-gradient(to right, #818cf8, #a78bfa);
+  }
+  
+  .dark {
+    --primary-gradient: linear-gradient(to right, #6366f1, #8b5cf6);
+    --secondary-gradient: linear-gradient(to right, #a5b4fc, #c4b5fd);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center;
+  }
+  
+  .section-subtitle {
+    @apply mt-4 text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center;
+  }
+  
+  .section-divider {
+    @apply w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 mx-auto rounded-full mb-16;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .prose-dark a {
+    color: #818cf8;
+  }
+  
+  .prose-dark a:hover {
+    color: #6366f1;
+    text-decoration: underline;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 dark:bg-indigo-700 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-600;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift on dark mode toggle */
+html {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+html.dark {
+  background-color: #0a0a0a;
+}
