@@ -18,7 +18,7 @@ export default function Footer({ scrollToSection }) {
           </div>
         </div>
         <p className="text-gray-400 mb-6">
-          Â© {new Date().getFullYear()} Alex Morgan. All rights reserved.
+          Â© {new Date().getFullYear()} Ahmed Hasan. All rights reserved.
         </p>
         <div className="flex justify-center space-x-8">
           {navLinks.map((link) => (
